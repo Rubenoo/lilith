@@ -1,0 +1,86 @@
+/* Stijlen voor de header */
+.navbar {
+  font-size: 1.4rem;
+  padding: 1rem;
+  align-items: center;
+  position: sticky; /* Changed from relative to sticky */
+  top: 0; /* Added to stick to top */
+  z-index: 1000; /* Added to keep header above other content */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  background-color: white;
+  text-decoration: none;
+  color: var(--bruin);
+  font-family: "EB Garamond", sans-serif;
+  font-weight: 500;
+  transition: color 0.5s ease;
+}
+
+.nav-links a:hover {
+  color: var(--oranje);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: var(--bruin);
+  transition: all 0.3s ease;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 992px) {
+  .hamburger {
+    display: flex;
+    z-index: 100;
+  }
+
+  .nav-links {
+    background: linear-gradient(to left, var(--roze) 50%, transparent 100%);
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    flex-direction: column;
+    padding: 5rem 2rem 2rem 8rem;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  /* Hamburger animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+}
