@@ -1,0 +1,42 @@
+@import url("./fonts.css");
+@import url("./footer.css");
+@import url("./header.css");
+@import url("./home.css");
+
+/* Kleurcodes: */
+
+:root {
+  --groen: #7e8a3d;
+  --bruin: #643e3b;
+  --oranje: #e7632d;
+  --roze: #f0c1d3;
+  --licht-roze: #faf0ef;
+}
+
+/* Stijlen voor de globale styles */
+
+/* Stijlen voor de body */
+body {
+  margin: 0;
+  background-color: var(--licht-roze);
+}
+
+/* Stijlen voor de main content */
+h1 {
+  font-family: "IM Fell DW Pica", sans-serif;
+  color: var(--bruin);
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: "IM Fell DW Pica", sans-serif;
+  color: var(--bruin);
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+p {
+  font-family: "EB Garamond", sans-serif;
+  color: var(--bruin);
+  font-size: 1.5rem;
+}

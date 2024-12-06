@@ -1,0 +1,5 @@
+/* Stijlen voor de footer */
+footer {
+  min-height: 120px;
+  background-color: var(--bruin);
+}

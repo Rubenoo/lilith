@@ -1,0 +1,94 @@
+/* Stijlen voor de fonts */
+/* EB Garamond fonts */
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/EBGaramond/EBGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/EBGaramond/EBGaramond-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/EBGaramond/EBGaramond-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/EBGaramond/EBGaramond-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/EBGaramond/EBGaramond-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* EB Garamond Italic variants */
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/EBGaramond/EBGaramond-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/EBGaramond/EBGaramond-MediumItalic.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/EBGaramond/EBGaramond-SemiBoldItalic.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/EBGaramond/EBGaramond-BoldItalic.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/assets/fonts/EBGaramond/EBGaramond-ExtraBoldItalic.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* IM Fell DW Pica fonts */
+@font-face {
+  font-family: "IM Fell DW Pica";
+  src: url("/assets/fonts/IMFellDWPica/IMFellDWPica-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IM Fell DW Pica";
+  src: url("/assets/fonts/IMFellDWPica/IMFellDWPica-Italic.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
