@@ -15,8 +15,28 @@
     <meta property="og:title" content="Lilith Management & Mojo" />
     <meta property="og:description" content="TODO" />
     <meta property="og:image" content="/icon.svg" />
-    <link rel="stylesheet" href="styles/index.css" />
-
+    <link rel="stylesheet" href="styles/index.css" as="style" />
+    <link rel="prefetch" href="home.html" as="fetch" crossorigin />
+    <link rel="prefetch" href="/icon.svg" as="image" />
+    <link
+      rel="prefetch"
+      href="assets/svg/Logo_Lilith_M&M_Groen_72.svg"
+      as="image"
+    />
+    <link
+      rel="prefetch"
+      href="assets/svg/Logo_Lilith_management_72.svg"
+      as="image"
+    />
+    <link
+      rel="prefetch"
+      href="assets/svg/Logo_Lilith_mojo_bruin_72.svg"
+      as="image"
+    />
+    <link rel="preload" href="styles/index.css" as="style" />
+    <link rel="preload" href="js/script.js" as="script" crossorigin />
+    <link rel="prefetch" href="mojo.html" as="fetch" crossorigin />
+    <link rel="prefetch" href="management.html" as="fetch" crossorigin />
     <title>Lilith Management & Mojo</title>
   </head>
   <body>
@@ -27,50 +47,15 @@
         <span></span>
       </button>
       <div class="nav-links">
+        <a href="#">Lilith Management & Mojo</a>
+
         <a href="#mojo">Lilith Mojo</a>
         <a href="#management">Lilith Management</a>
         <a href="mailto:TODO@example.com">Contact</a>
       </div>
     </nav>
-    <main>
-      <section class="intro">
-        <div class="intro-content">
-          <img src="/icon.svg" alt="Lilith Icon" />
-          <h1>Hi, ik ben Lilith!</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue
-            nunc et nunc tincidunt viverra. Nulla facilisi. Sed euismod, nunc
-            vel bibendum bibendum, nisl nisl bibendum nunc, vel bibendum nunc
-            nisl vel nisl. Sed euismod, nunc vel bibendum bibendum, nisl nisl
-            bibendum nunc, vel bibendum nunc nisl vel nisl. Sed euismod, nunc
-            vel bibendum bibendum, nisl nisl bibendum nunc, vel bibendum nunc
-            nisl vel nisl.
-          </p>
-          <div class="button-container">
-            <button class="button button-groen-1">Ga naar...</button>
-            <button class="button button-groen-2">Ga naar...</button>
-          </div>
-        </div>
-        <span />
-      </section>
-      <section class="keuzeblock">
-        <a href="#management" class="keuzeblock-management">
-          <img
-            src="/assets/svg/Symbols_lilith-roze.svg"
-            alt="Lilith Management"
-          />
-          <h2>Lilith Management</h2>
-          <p>lorem ipsum gecentrerde tekst</p>
-          <p class="underline">Ga naar Lilith Management -></p>
-        </a>
-        <a href="#mojo" class="keuzeblock-mojo">
-          <img src="/assets/svg/zandloper.svg" alt="Lilith Mojo" />
-          <h2>Lilith Mojo</h2>
-          <p>lorem ipsum gecentrerde tekst</p>
-          <p class="underline">Ga naar Lilith Mojo -></p>
-        </a>
-      </section>
-    </main>
+    <div id="content" class="contents"></div>
+
     <footer></footer>
     <script src="js/script.js" type="module"></script>
   </body>

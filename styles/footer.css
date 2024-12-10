@@ -1,5 +1,10 @@
 /* Stijlen voor de footer */
 footer {
-  min-height: 120px;
-  background-color: var(--bruin);
+  min-height: 150px;
+  background-image: url("/assets/svg/footer.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 992px) {
+    background-size: 250%;
+  }
 }

@@ -1,5 +1,5 @@
 .intro {
-  margin: 3rem 0rem 0 8rem;
+  margin: 3rem 0 0 8rem;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 2rem;
@@ -10,14 +10,6 @@
   }
   img {
     width: 50%;
-  }
-
-  span {
-    background-color: var(--roze);
-    width: 100%;
-    border-radius: 10px 0 0 10px;
-    min-height: 300px;
-    max-height: 100%;
   }
 }
 .intro-content {
@@ -33,56 +25,14 @@
   flex-wrap: wrap; /* Allow wrapping */
 }
 
-.button {
-  transition: transform 0.5s ease;
-  font-family: "IM Fell DW Pica", sans-serif;
-  color: var(--licht-roze);
-  border: none;
-  font-size: 1.5rem;
-  width: 280px; /* Fixed width */
-  height: 70px; /* Fixed height */
-  min-height: 54px;
-  text-align: center; /* Center text horizontally */
-  display: flex; /* Use flexbox */
-  align-items: center; /* Center text vertically */
-  justify-content: start; /* Center text horizontally */
-  background-size: 115% 115%; /* Changed to exact fit */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  background-color: transparent; /* Add this */
-  background-position: center; /* Adjusted to push more towards bottom */
-  padding-inline-start: 2.5rem;
-
-  @media screen and (max-width: 992px) {
-    padding-inline-start: 1.5rem;
-    width: 250px; /* Slightly smaller on mobile */
-    height: 65px;
-  }
-}
-
-.button:hover {
-  transform: scale(1.05);
-  transition: transform 0.5s ease;
-}
-
-.button-groen-1 {
-  background-image: url("/assets/svg/Button_1_groen.svg");
-}
-.button-groen-2 {
-  background-image: url("/assets/svg/Button_2_groen.svg");
-  background-position: center 65%; /* Adjusted to push more towards bottom */
-}
-.button-groen-3 {
-  background-image: url("/assets/svg/Button_3_groen.svg");
-}
-
 .keuzeblock {
-  padding: 8rem 0;
+  padding: 8rem 0 0 0;
   display: flex;
   justify-content: center;
-  align-content: center;
   flex-direction: row;
   text-align: center;
-  position: relative; /* Add this */
+  text-wrap: balance;
+  position: relative;
   @media screen and (max-width: 992px) {
     padding: 2rem 0;
   }
@@ -97,12 +47,17 @@
   h2,
   p {
     color: var(--licht-roze);
+    text-wrap: balance;
     margin-block: 2rem;
-    text-decoration: none; /* Remove default anchor underline */
+    max-width: 50%;
+    @media screen and (max-width: 992px) {
+      margin-block: 1rem;
+    }
+    text-decoration: none;
   }
   a {
     color: var(--licht-roze);
-    text-decoration: none; /* Remove default anchor underline */
+    text-decoration: none;
   }
   img {
     width: 100px;
@@ -115,9 +70,9 @@
 }
 
 .keuzeblock-management {
-  text-decoration: none; /* Remove default anchor underline */
-
-  padding: 7rem 8rem;
+  width: 540px;
+  padding: 8rem;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -129,36 +84,43 @@
   justify-content: center;
   overflow: visible; /* Add this to ensure overflow is visible */
   z-index: 1; /* Add this to ensure the element is above the background */
-  margin-right: -60px; /* Add this to create 10px overlap */
+  margin-right: -50px; /* Add this to create 10px overlap */
   @media screen and (max-width: 992px) {
+    background-size: 200% 200%; /* Changed from cover to exact fit */
     margin-right: 0;
-    margin-bottom: -15px; /* Creates vertical overlap on mobile */
-    background-position: center;
-    padding: 3rem 0;
+    margin-bottom: -10px; /* Creates vertical overlap on mobile */
+    background-position: 50% 50%;
+    padding: 1rem 0;
+    width: 100%;
   }
 }
 
 .keuzeblock-mojo {
-  text-decoration: none; /* Remove default anchor underline */
-
-  padding: 0 8rem;
+  margin-bottom: 0;
+  padding: 8rem;
+  width: 500px;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
   background-color: transparent;
-  background-position: 60% 40%;
-  background-size: 145% 145%; /* Changed from cover to exact fit */
+  background-position: 50% 40%;
+  background-size: 135% 135%; /* Changed from cover to exact fit */
   background-image: url("/assets/svg/oranjeblok_smal.svg");
   align-items: center;
   justify-content: center;
   overflow: visible; /* Add this to ensure overflow is visible */
+  margin-left: -50px; /* Add this to create 10px overlap */
+
   @media screen and (max-width: 992px) {
-    background-position: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    margin-left: 0;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: 200% 200%; /* Changed from cover to exact fit */
   }
 }
 
-/* Add these new rules */
 .keuzeblock-mojo,
 .keuzeblock-management {
   transition: transform 0.5s ease;
@@ -171,4 +133,30 @@
 
 .underline {
   text-decoration: underline !important;
+}
+
+.contents {
+  display: contents;
+}
+
+.home-toelichting-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 20%;
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  img {
+    width: 50%;
+    @media screen and (max-width: 992px) {
+      display: block; /* Add this */
+      margin: 0 auto; /* Add this */
+    }
+  }
 }

@@ -2,6 +2,8 @@
 @import url("./footer.css");
 @import url("./header.css");
 @import url("./home.css");
+@import url("./mojo.css");
+@import url("./management.css");
 
 /* Kleurcodes: */
 
@@ -19,6 +21,11 @@
 body {
   margin: 0;
   background-color: var(--licht-roze);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+body.loaded {
+  opacity: 1;
 }
 
 /* Stijlen voor de main content */
@@ -26,6 +33,10 @@ h1 {
   font-family: "IM Fell DW Pica", sans-serif;
   color: var(--bruin);
   font-size: 4rem;
+  @media screen and (max-width: 992px) {
+    font-size: 3rem;
+    margin-block: 1.5rem;
+  }
 }
 
 h2 {
@@ -33,10 +44,132 @@ h2 {
   color: var(--bruin);
   font-size: 3rem;
   font-weight: normal;
+  @media screen and (max-width: 992px) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-family: "IM Fell DW Pica", sans-serif;
+  color: var(--oranje);
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-block: 0;
+
+  @media screen and (max-width: 992px) {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  font-family: "IM Fell DW Pica", sans-serif;
+  color: var(--groen);
+  font-size: 2rem;
+  font-weight: normal;
+  margin-block: 0;
+
+  @media screen and (max-width: 992px) {
+    font-size: 1.25rem;
+  }
+
+  &.oranje {
+    color: var(--oranje);
+    margin-block-start: 2rem;
+    @media screen and (max-width: 992px) {
+      margin-block-start: 1rem;
+    }
+  }
+}
+
+h5 {
+  font-family: "EB Garamond", sans-serif;
+  color: var(--groen);
+  font-size: 1.75rem;
+  font-weight: normal;
+  margin-block: 0;
+
+  @media screen and (max-width: 992px) {
+    font-size: 1.25rem;
+  }
 }
 
 p {
   font-family: "EB Garamond", sans-serif;
   color: var(--bruin);
   font-size: 1.5rem;
+  @media screen and (max-width: 992px) {
+    font-size: 1.2rem;
+    margin-block: 0.5rem;
+  }
+}
+
+.button {
+  transition: transform 0.5s ease;
+  font-family: "IM Fell DW Pica", sans-serif;
+  color: var(--licht-roze);
+  border: none;
+  font-size: 1.5rem;
+  width: 280px; /* Fixed width */
+  height: 70px; /* Fixed height */
+  min-height: 54px;
+  text-align: center; /* Center text horizontally */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center text vertically */
+  justify-content: start; /* Center text horizontally */
+  background-size: 115% 115%; /* Changed to exact fit */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-color: transparent; /* Add this */
+  background-position: center; /* Adjusted to push more towards bottom */
+  padding-inline-start: 2.5rem;
+
+  @media screen and (max-width: 992px) {
+    padding-inline-start: 1.5rem;
+    width: 250px; /* Slightly smaller on mobile */
+    height: 65px;
+  }
+}
+
+.button:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+.button-bruin-1 {
+  background-image: url("/assets/svg/Button_1_bruin.svg");
+}
+.button-groen-1 {
+  background-image: url("/assets/svg/Button_1_groen.svg");
+}
+.button-groen-2 {
+  background-image: url("/assets/svg/Button_2_groen.svg");
+  background-position: center 65%; /* Adjusted to push more towards bottom */
+}
+.button-groen-3 {
+  background-image: url("/assets/svg/Button_3_groen.svg");
+}
+
+.roze-block {
+  background-color: var(--roze);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+.rond {
+  display: block;
+  background-color: var(--groen);
+  height: 250px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin: 0 auto;
+  @media screen and (max-width: 992px) {
+    height: 150px;
+  }
+  &.groen {
+    background-color: var(--groen);
+  }
+  &.oranje {
+    background-color: var(--oranje);
+  }
+  &.roze {
+    background-color: var(--roze);
+  }
 }

@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { resolve } from "path";
 
 export default defineConfig({
   base: "",
@@ -12,6 +13,12 @@ export default defineConfig({
     cssMinify: true,
     assetsInlineLimit: 4096,
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        home: resolve(__dirname, "home.html"),
+        management: resolve(__dirname, "management.html"),
+        mojo: resolve(__dirname, "mojo.html"),
+      },
       output: {
         manualChunks: undefined,
         compact: true,
