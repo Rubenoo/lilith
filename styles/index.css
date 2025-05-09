@@ -109,29 +109,34 @@ p {
   color: var(--licht-roze);
   border: none;
   font-size: 1.5rem;
-  width: 280px; /* Fixed width */
+  min-width: 390px;
   height: 70px; /* Fixed height */
   min-height: 54px;
   text-align: center; /* Center text horizontally */
   display: flex; /* Use flexbox */
   align-items: center; /* Center text vertically */
   justify-content: start; /* Center text horizontally */
-  background-size: 115% 115%; /* Changed to exact fit */
+  background-size: 150% 150%; /* Changed to exact fit */
   background-repeat: no-repeat; /* Prevent background image from repeating */
   background-color: transparent; /* Add this */
-  background-position: center; /* Adjusted to push more towards bottom */
+  background-position: 85%; /* Adjusted to push more towards bottom */
   padding-inline-start: 2.5rem;
 
   @media screen and (max-width: 992px) {
     padding-inline-start: 1.5rem;
-    width: 250px; /* Slightly smaller on mobile */
+    background-position: 55%; /* Adjusted to push more towards bottom */
+    background-size: 140% 140%; /* Changed to exact fit */
     height: 65px;
+    min-width: 330px;
   }
 }
 
 .button:hover {
   transform: scale(1.05);
   transition: transform 0.5s ease;
+}
+.button-oranje-1 {
+  background-image: url("/assets/svg/Button_1_oranje.svg");
 }
 .button-bruin-1 {
   background-image: url("/assets/svg/Button_1_bruin.svg");
