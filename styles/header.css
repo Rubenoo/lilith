@@ -1,11 +1,11 @@
 /* Stijlen voor de header */
 .navbar {
   font-size: 1.4rem;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   align-items: center;
-  position: sticky; /* Changed from relative to sticky */
-  top: 0; /* Added to stick to top */
-  z-index: 1000; /* Added to keep header above other content */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: flex-end;
 }
@@ -82,5 +82,112 @@
 
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
+  }
+}
+/* Dropdown menu styles */
+.dropdown {
+  display: inline-flex;
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  background-color: white;
+  text-decoration: none;
+  color: var(--bruin);
+  font-family: "EB Garamond", sans-serif;
+  font-weight: 500;
+  transition: color 0.5s ease;
+}
+
+.dropdown-toggle:hover {
+  color: var(--oranje);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: transparent;
+  margin-top: 0.5rem;
+  z-index: 1100;
+}
+
+.dropdown-menu a {
+  display: block;
+  margin-bottom: 0.5rem;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  background-color: white;
+  text-decoration: none;
+  color: var(--bruin);
+  font-family: "EB Garamond", sans-serif;
+  font-weight: 500;
+  transition: color 0.5s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.dropdown-menu a:hover {
+  color: var(--oranje);
+}
+
+/* Remove hover behavior completely and rely on click */
+.dropdown:hover .dropdown-menu {
+  display: none;
+}
+
+/* Show dropdown only when active class is present */
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/* Adjust for mobile view */
+@media screen and (max-width: 992px) {
+  /* Make all nav items including dropdown the same width */
+  .nav-links a,
+  .dropdown,
+  .dropdown-toggle {
+    width: 100%; /* Make all items full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+
+  .dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ensure dropdown toggle button matches other nav links exactly */
+  .dropdown-toggle {
+    display: block;
+    text-align: center;
+    margin: 0; /* Reset any margins */
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    padding: 0;
+    margin-top: 0.5rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown-menu a {
+    white-space: normal; /* Allow text wrapping on mobile */
+    text-align: center;
+    margin: 0.5rem 0;
+    width: 100%; /* Match width of parent */
+    box-sizing: border-box;
+  }
+
+  /* Show dropdown when active in mobile view */
+  .dropdown.active .dropdown-menu {
+    display: flex;
   }
 }
