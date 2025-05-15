@@ -60,3 +60,55 @@
     }
   }
 }
+
+.massage-container {
+  padding: 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.massage-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/svg/rozeblok_smal.svg");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  z-index: -1;
+  transform: scale(1.5); /* Adjust this value to control overflow amount */
+  transform-origin: center; /* Control from where the scaling happens */
+}
+
+.small {
+  width: 50% !important;
+}
+
+.small-groen {
+  width: 15% !important;
+  margin-block-end: 2rem;
+}
+
+.padding-quote {
+  padding-inline: 20rem;
+  @media screen and (max-width: 992px) {
+    padding-inline: 2rem;
+  }
+  h5 {
+    padding-block-start: 2rem;
+    @media screen and (max-width: 992px) {
+      padding-block-start: 1rem;
+    }
+  }
+}
+
+.spark-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

@@ -47,6 +47,9 @@ h2 {
   @media screen and (max-width: 992px) {
     font-size: 2rem;
   }
+  &.oranje {
+    color: var(--oranje);
+  }
 }
 
 h3 {
@@ -58,6 +61,11 @@ h3 {
 
   @media screen and (max-width: 992px) {
     font-size: 1.5rem;
+  }
+
+  &.bruin {
+    color: var(--bruin);
+    text-align: center;
   }
 }
 
@@ -109,26 +117,45 @@ p {
   color: var(--licht-roze);
   border: none;
   font-size: 1.5rem;
-  width: 420px;
-
-  height: 70px; /* Fixed height */
+  height: 70px;
   min-height: 54px;
-  text-align: center; /* Center text horizontally */
-  display: flex; /* Use flexbox */
-  align-items: center; /* Center text vertically */
-  justify-content: start; /* Center text horizontally */
-  background-size: 150% 150%; /* Changed to exact fit */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  background-color: transparent; /* Add this */
-  background-position: 50%; /* Adjusted to push more towards bottom */
-  padding-inline-start: 2.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-inline: 2.5rem;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  background-color: transparent;
+  background-image: none; /* Remove background from main element */
 
   @media screen and (max-width: 992px) {
     padding-inline-start: 1.5rem;
-    background-position: 55%; /* Adjusted to push more towards bottom */
-    background-size: 140% 140%; /* Changed to exact fit */
     height: 65px;
-    min-width: 330px;
+  }
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 140% 140%;
+  background-repeat: no-repeat;
+  background-position: 80%;
+  z-index: -1;
+  transform: scale(
+    1.2
+  ); /* Adjust scale factor as needed for desired overflow */
+  transform-origin: center;
+  transition: transform 0.5s ease; /* Add transition to pseudo-element */
+
+  @media screen and (max-width: 992px) {
+    background-position: 55%;
+    background-size: 130% 130%;
   }
 }
 
@@ -136,25 +163,30 @@ p {
   transform: scale(1.05);
   transition: transform 0.5s ease;
 }
-.button-oranje-1 {
+
+/* Button variants with background images on pseudo-elements */
+.button-oranje-1::before {
   background-image: url("/assets/svg/Button_1_oranje.svg");
 }
-.button-roze-1 {
+
+.button-roze-1::before {
   background-image: url("/assets/svg/Button_1_roze.svg");
 }
-.button-bruin-1 {
+
+.button-bruin-1::before {
   background-image: url("/assets/svg/Button_1_bruin.svg");
 }
-.button-groen-1 {
+
+.button-groen-1::before {
   background-image: url("/assets/svg/Button_1_groen.svg");
-
 }
-.button-groen-2 {
+
+.button-groen-2::before {
   background-image: url("/assets/svg/Button_2_groen.svg");
-  background-position: 62%;
-
-
+  background-position: 30%;
+  background-size: 120% 120%;
 }
-.button-groen-3 {
+
+.button-groen-3::before {
   background-image: url("/assets/svg/Button_3_groen.svg");
 }
