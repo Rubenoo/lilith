@@ -1,11 +1,13 @@
 .management-onderdelen {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 12rem;
   text-align: center;
-  padding: 6rem;
+  padding: 6rem 8rem;
+  img {
+    width: 100%;
+  }
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -18,7 +20,7 @@
   background-image: url("/assets/svg/oranjebalk.svg");
   background-repeat: repeat-x;
   background-position: center 40%;
-  background-size: 200% 200%;
+  background-size: 120% 120%;
   padding: 4rem 1rem;
   margin-block: 4rem;
   h4,
@@ -34,5 +36,14 @@
     background-position: center;
     padding: 2rem 1rem;
     margin-block: 2rem;
+  }
+}
+
+.afspraak-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    color: var(--bruin);
   }
 }

@@ -1,6 +1,6 @@
 /* Stijlen voor de footer */
 footer {
-  padding: 4rem 8rem;
+  padding: 6rem 4rem 2rem 4rem;
   background-image: url("/assets/svg/footer.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,7 +16,9 @@ footer {
   }
   img {
     &.logo {
+      align-self: center;
       width: 75%;
+      max-width: 250px;
       @media screen and (max-width: 992px) {
         width: 40%;
       }
@@ -42,6 +44,9 @@ footer {
     font-size: 1.4rem;
     @media screen and (max-width: 992px) {
       font-size: 1.2rem;
+    }
+    &.subtitle{
+      font-size: 1rem;
     }
     &.icon {
       text-decoration: none;

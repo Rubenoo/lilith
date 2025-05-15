@@ -1,5 +1,5 @@
 .intro {
-  margin: 3rem 0 0 8rem;
+  margin: 0 0 0 8rem;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 2rem;
@@ -149,7 +149,7 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  padding: 6rem 6rem;
+  padding: 6rem 4rem;
 
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
@@ -167,10 +167,11 @@
 
 .quote-container {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  padding-block: 4rem;
+  flex-direction: column;
+  padding-block: 3rem 6rem;
   @media screen and (max-width: 992px) {
     padding-block: 2rem;
   }

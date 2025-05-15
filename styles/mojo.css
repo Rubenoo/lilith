@@ -19,7 +19,7 @@
     margin-left: auto;
     margin-right: auto;
     &.small {
-      width: 50%;
+      width: 40%;
       margin-left: unset;
       margin-right: unset;
     }
@@ -39,30 +39,7 @@
   justify-content: space-around;
   flex-direction: column;
 }
-.mojo-toelichting {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Add this line */
-  margin-block: 6rem;
-  @media screen and (max-width: 992px) {
-    margin-block: 1rem;
-  }
-}
 
-.mojo-toelichting-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  gap: 8rem;
-  padding: 2rem;
-  text-align: center;
-  @media screen and (max-width: 992px) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-}
 .mojo-review-container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;

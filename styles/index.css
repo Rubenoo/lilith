@@ -109,7 +109,8 @@ p {
   color: var(--licht-roze);
   border: none;
   font-size: 1.5rem;
-  min-width: 390px;
+  width: 420px;
+
   height: 70px; /* Fixed height */
   min-height: 54px;
   text-align: center; /* Center text horizontally */
@@ -119,7 +120,7 @@ p {
   background-size: 150% 150%; /* Changed to exact fit */
   background-repeat: no-repeat; /* Prevent background image from repeating */
   background-color: transparent; /* Add this */
-  background-position: 85%; /* Adjusted to push more towards bottom */
+  background-position: 50%; /* Adjusted to push more towards bottom */
   padding-inline-start: 2.5rem;
 
   @media screen and (max-width: 992px) {
@@ -138,43 +139,22 @@ p {
 .button-oranje-1 {
   background-image: url("/assets/svg/Button_1_oranje.svg");
 }
+.button-roze-1 {
+  background-image: url("/assets/svg/Button_1_roze.svg");
+}
 .button-bruin-1 {
   background-image: url("/assets/svg/Button_1_bruin.svg");
 }
 .button-groen-1 {
   background-image: url("/assets/svg/Button_1_groen.svg");
+
 }
 .button-groen-2 {
   background-image: url("/assets/svg/Button_2_groen.svg");
-  background-position: center 65%; /* Adjusted to push more towards bottom */
+  background-position: 62%;
+
+
 }
 .button-groen-3 {
   background-image: url("/assets/svg/Button_3_groen.svg");
-}
-
-.roze-block {
-  background-color: var(--roze);
-  width: 100%;
-  height: 100%;
-  border-radius: 10px 0 0 10px;
-}
-.rond {
-  display: block;
-  background-color: var(--groen);
-  height: 250px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  margin: 0 auto;
-  @media screen and (max-width: 992px) {
-    height: 150px;
-  }
-  &.groen {
-    background-color: var(--groen);
-  }
-  &.oranje {
-    background-color: var(--oranje);
-  }
-  &.roze {
-    background-color: var(--roze);
-  }
 }
