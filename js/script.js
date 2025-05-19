@@ -59,6 +59,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   hamburger.addEventListener("click", handleHamburgerClick);
   document.addEventListener("click", handleOutsideClick);
+
+  // Add navigation functionality to buttons
+  const setupButtonNavigation = () => {
+    const managementButton = document.querySelector(".button-oranje-1");
+    const mojoButton = document.querySelector(".button-groen-1");
+
+    if (managementButton) {
+      managementButton.addEventListener("click", () => {
+        window.location.hash = "management";
+      });
+    }
+
+    if (mojoButton) {
+      mojoButton.addEventListener("click", () => {
+        window.location.hash = "mojo";
+      });
+    }
+  };
+
+  // Initial setup for buttons
+  setupButtonNavigation();
 });
 
 /* Hash router */
@@ -98,8 +119,38 @@ const locationHandler = async () => {
       behavior: "smooth",
     });
     document.body.classList.add("loaded");
+
+    // Set up button navigation after content is loaded
+    setupButtonNavigation();
   }, 300);
 };
+
+// Function needs to be accessible outside the DOMContentLoaded scope
+function setupButtonNavigation() {
+  const managementButton = document.querySelector(".button-oranje-1");
+  const mojoButton = document.querySelector(".button-groen-1");
+
+  if (managementButton) {
+    // Remove existing listeners to prevent duplicates
+    const newManagementButton = managementButton.cloneNode(true);
+    managementButton.parentNode.replaceChild(
+      newManagementButton,
+      managementButton,
+    );
+    newManagementButton.addEventListener("click", () => {
+      window.location.hash = "management";
+    });
+  }
+
+  if (mojoButton) {
+    // Remove existing listeners to prevent duplicates
+    const newMojoButton = mojoButton.cloneNode(true);
+    mojoButton.parentNode.replaceChild(newMojoButton, mojoButton);
+    newMojoButton.addEventListener("click", () => {
+      window.location.hash = "mojo";
+    });
+  }
+}
 
 // create a function that watches the hash and calls the urlLocationHandler
 window.addEventListener("hashchange", locationHandler);
