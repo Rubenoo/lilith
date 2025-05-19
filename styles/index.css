@@ -171,6 +171,8 @@ p {
 
 .button-roze-1::before {
   background-image: url("/assets/svg/Button_1_roze.svg");
+  background-position: 42.5%;
+  background-size: 120% 120%;
 }
 
 .button-bruin-1::before {
@@ -184,7 +186,7 @@ p {
 .button-groen-2::before {
   background-image: url("/assets/svg/Button_2_groen.svg");
   background-position: 30%;
-  background-size: 120% 120%;
+  background-size: 110% 110%;
 }
 
 .button-groen-3::before {
