@@ -67,8 +67,11 @@
   position: relative;
   overflow: visible;
   z-index: 1;
+  @media screen and (max-width: 992px) {
+    padding: 0 0.5rem;
+    margin-block-end: 1rem;
+  }
 }
-
 .massage-container::before {
   content: "";
   position: absolute;
@@ -85,7 +88,7 @@
   transform-origin: center; /* Control from where the scaling happens */
   @media screen and (max-width: 992px) {
     transform: scale(1.11); /* Adjust this value to control overflow amount */
-    background-size: 200%;
+    background-size: 190%;
     background-position: 50% 15%;
   }
 }
