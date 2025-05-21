@@ -86,8 +86,10 @@
   z-index: -1;
   transform: scale(1.5); /* Adjust this value to control overflow amount */
   transform-origin: center; /* Control from where the scaling happens */
-  @media screen and (max-width: 1200px) {
-    transform: scale(1.11); /* Adjust this value to control overflow amount */
+}
+@media screen and (max-width: 992px) {
+  .massage-container::before {
+    transform: scale(1.11);
     background-size: 190%;
     background-position: 50% 15%;
   }
