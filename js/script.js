@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initial setup for buttons
   setupButtonNavigation();
+  setupIntroImagesNavigation();
 });
 
 /* Hash router */
@@ -120,10 +121,35 @@ const locationHandler = async () => {
     });
     document.body.classList.add("loaded");
 
+    setupIntroImagesNavigation();
+
     // Set up button navigation after content is loaded
     setupButtonNavigation();
   }, 300);
 };
+
+function setupIntroImagesNavigation() {
+  // Select images from both intro-content and mojo-intro-content classes
+  const introImages = document.querySelectorAll(
+    ".intro-content img, .mojo-intro-content img",
+  );
+
+  introImages.forEach((img) => {
+    // Check if the image is not already wrapped in an anchor tag
+    if (img.parentNode.tagName !== "A") {
+      // Create a wrapper anchor element
+      const wrapper = document.createElement("a");
+      wrapper.href = "#/";
+
+      // Get the parent element of the image
+      const parent = img.parentNode;
+
+      // Replace the image with the wrapper
+      parent.insertBefore(wrapper, img);
+      wrapper.appendChild(img);
+    }
+  });
+}
 
 // Function needs to be accessible outside the DOMContentLoaded scope
 function setupButtonNavigation() {

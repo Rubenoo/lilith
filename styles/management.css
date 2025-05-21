@@ -32,8 +32,8 @@
     }
   }
   @media screen and (max-width: 992px) {
-    background-size: 125%;
-    background-position: center;
+    background-size: 180%;
+    background-position: 20% 30%;
     padding: 2rem 1rem;
     margin-block: 2rem;
   }
