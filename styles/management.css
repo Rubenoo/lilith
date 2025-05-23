@@ -4,9 +4,12 @@
   justify-content: center;
   gap: 12rem;
   text-align: center;
-  padding: 6rem 8rem;
+  padding: 4rem 8rem;
+  p {
+    font-size: 1.15rem;
+  }
   img {
-    width: 100%;
+    width: 75%;
   }
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;

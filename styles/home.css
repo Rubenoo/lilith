@@ -12,7 +12,7 @@
   img {
     width: 40%;
     &.full-width {
-      width: 95%;
+      width: 100%;
     }
   }
 }
@@ -44,16 +44,21 @@
   a {
     text-decoration: underline;
     font-family: "IM Fell DW Pica", sans-serif;
+    font-size: 0.9rem;
   }
 
   h2 {
     text-wrap: nowrap;
+    font-size: 2.5rem !important;
+    font-weight: 400;
   }
   h2,
   p {
     color: var(--licht-roze);
     text-wrap: balance;
     margin-block: 2rem;
+    font-size: 1.4rem;
+
     @media screen and (max-width: 992px) {
       margin-block: 1rem;
     }
@@ -74,7 +79,7 @@
 }
 
 .keuzeblock-management {
-  width: 540px;
+  width: 480px;
   padding: 8rem;
   text-decoration: none;
   display: flex;
@@ -102,7 +107,7 @@
 .keuzeblock-mojo {
   margin-bottom: 0;
   padding: 8rem;
-  width: 500px;
+  width: 450px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -137,6 +142,24 @@
 
 .underline {
   text-decoration: underline !important;
+  position: relative; /* Add position context */
+  display: inline-flex; /* Change to inline-flex for better alignment */
+  align-items: center; /* Align items vertically */
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 25px; /* Adjust based on your SVG size */
+    height: 25px; /* Adjust based on your SVG size */
+    background-image: url("/assets/svg/pijl_lilith_02.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px;
+    vertical-align: center; /* Adjust this value as needed */
+    position: relative; /* This helps with fine-tuning */
+    top: 3px; /* Fine-tune vertical position - adjust as needed */
+  }
 }
 
 .contents {
@@ -150,6 +173,7 @@
   justify-content: center;
   gap: 4rem;
   padding: 6rem 4rem;
+  text-align: center;
 
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;

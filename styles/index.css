@@ -33,6 +33,7 @@ h1 {
   font-family: "IM Fell DW Pica", sans-serif;
   color: var(--bruin);
   font-size: 4rem;
+  font-weight: normal;
   @media screen and (max-width: 992px) {
     font-size: 3rem;
     margin-block: 1.5rem;
@@ -42,10 +43,10 @@ h1 {
 h2 {
   font-family: "IM Fell DW Pica", sans-serif;
   color: var(--bruin);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: normal;
   @media screen and (max-width: 992px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   &.oranje {
     color: var(--oranje);
@@ -103,10 +104,17 @@ h5 {
 
 p {
   font-family: "EB Garamond", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: var(--bruin);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  &.oranje {
+    color: var(--oranje);
+  }
+
   @media screen and (max-width: 992px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-block: 0.5rem;
   }
 }
@@ -138,6 +146,31 @@ p {
   }
 }
 
+.button::after {
+  content: "";
+  display: inline-block;
+  width: 25px; /* Adjust based on your SVG size */
+  height: 25px; /* Adjust based on your SVG size */
+  background-image: url("/assets/svg/pijl_lilith_02.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 10px;
+  vertical-align: middle;
+  /* Add these styles for mobile */
+  @media screen and (max-width: 992px) {
+    width: 25px; /* Slightly smaller on mobile */
+    height: 25px;
+    margin-left: 8px;
+    display: inline-block !important; /* Force display on mobile */
+    position: relative;
+  }
+}
+
+.buttonbruinicon::after {
+  background-image: url("/assets/svg/pijl_lilith_02_bruin.svg");
+}
+
 .button::before {
   content: "";
   position: absolute;
@@ -165,10 +198,13 @@ p {
 }
 
 /* Button variants with background images on pseudo-elements */
+.button-oranje-1 {
+  max-width: 395px;
+}
+
 .button-oranje-1::before {
   background-image: url("/assets/svg/Button_1_oranje.svg");
-  background-position: 42%;
-  background-size: 130% 130%;
+  background-position: 55%;
   @media screen and (max-width: 992px) {
     background-position: 60%;
   }
@@ -180,30 +216,42 @@ p {
   background-size: 120% 120%;
 }
 
-.button-bruin-1::before {
-  background-image: url("/assets/svg/Button_1_bruin.svg");
-  background-position: 45%;
-  background-size: 130% 130%;
-  @media screen and (max-width: 992px) {
-    background-position: 60%;
+.button-bruin-1 {
+  justify-content: center;
+  &::before {
+    background-image: url("/assets/svg/Button_1_bruin.svg");
+    background-position: 45%;
+    background-size: 130% 130%;
+    @media screen and (max-width: 992px) {
+      background-position: 60%;
+    }
   }
 }
 
 .button-groen-1::before {
   background-image: url("/assets/svg/Button_1_groen.svg");
+
   background-position: center;
   background-size: 125% 125%;
   @media screen and (max-width: 992px) {
     background-position: 70%;
   }
 }
-.button-groen-1-afspraak::before {
-  background-image: url("/assets/svg/Button_1_groen.svg");
-  background-position: 90%;
-  background-size: 125% 125%;
-
+.button-groen-1-afspraak {
+  justify-content: center;
+  padding: 0;
   @media screen and (max-width: 992px) {
-    background-position: 70%;
+    justify-content: start;
+    padding-inline-start: 3rem;
+  }
+  &::before {
+    background-image: url("/assets/svg/Button_1_groen.svg");
+    background-position: 50%;
+    background-size: 125% 125%;
+
+    @media screen and (max-width: 992px) {
+      background-position: 70%;
+    }
   }
 }
 
