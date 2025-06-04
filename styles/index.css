@@ -120,6 +120,7 @@ p {
 }
 
 .button {
+  text-decoration: none;
   transition: transform 0.5s ease;
   font-family: "IM Fell DW Pica", sans-serif;
   color: var(--licht-roze);
@@ -139,6 +140,9 @@ p {
   background-color: transparent;
   background-image: none; /* Remove background from main element */
   text-wrap: nowrap;
+  box-sizing: border-box;
+  cursor: pointer;
+
   @media screen and (max-width: 992px) {
     padding-inline-start: 1.5rem;
     height: 65px;
