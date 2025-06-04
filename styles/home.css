@@ -20,6 +20,9 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  @media screen and (max-width: 992px) {
+    gap: 1rem;
+  }
 }
 .button-container {
   display: flex;
@@ -200,7 +203,7 @@
   flex-direction: column;
   padding-block: 3rem 6rem;
   @media screen and (max-width: 992px) {
-    padding-block: 2rem;
+    padding-block: 4rem;
   }
   h3 {
     width: 50%;

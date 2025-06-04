@@ -38,6 +38,9 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  @media screen and (max-width: 992px) {
+    gap: 1rem;
+  }
 }
 
 .mojo-review-container {
@@ -68,7 +71,7 @@
   overflow: visible;
   z-index: 1;
   @media screen and (max-width: 992px) {
-    padding: 0 0.5rem;
+    padding: 0.5rem 0.5rem;
     margin-block-end: 1rem;
   }
 }
@@ -89,9 +92,9 @@
 }
 @media screen and (max-width: 992px) {
   .massage-container::before {
-    transform: scale(1.11);
+    transform: scale(1.1);
     background-size: 190%;
-    background-position: 50% 15%;
+    background-position: 50% 20%;
   }
 }
 
@@ -102,6 +105,7 @@
 .small-groen {
   width: 15% !important;
   margin-block-end: 2rem;
+  aspect-ratio: 1/1;
 }
 
 .padding-quote {
@@ -121,4 +125,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media screen and (max-width: 992px) {
+    padding-block: 1.5rem;
+  }
 }

@@ -50,3 +50,15 @@
     color: var(--bruin);
   }
 }
+.hidden {
+  display: none;
+  @media screen and (max-width: 992px) {
+    display: block;
+  }
+}
+.shown {
+  display: block;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+}
