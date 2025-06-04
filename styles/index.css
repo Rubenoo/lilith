@@ -200,6 +200,9 @@ p {
 /* Button variants with background images on pseudo-elements */
 .button-oranje-1 {
   max-width: 395px;
+  @media screen and (max-width: 992px) {
+    max-width: 345px;
+  }
 }
 
 .button-oranje-1::before {

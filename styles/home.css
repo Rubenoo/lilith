@@ -57,7 +57,6 @@
     color: var(--licht-roze);
     text-wrap: balance;
     margin-block: 2rem;
-    font-size: 1.4rem;
 
     @media screen and (max-width: 992px) {
       margin-block: 1rem;
