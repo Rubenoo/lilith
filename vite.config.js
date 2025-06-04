@@ -10,7 +10,7 @@ export default defineConfig({
   },
   build: {
     minify: "terser",
-    cssMinify: true,
+    cssMinify: false,
     assetsInlineLimit: 4096,
     rollupOptions: {
       input: {
