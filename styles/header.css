@@ -76,7 +76,7 @@
 
   /* Hamburger animation */
   .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(9px, 9px);
+    transform: rotate(45deg) translate(8.75px, 8.75px);
   }
 
   .hamburger.active span:nth-child(2) {
@@ -84,7 +84,7 @@
   }
 
   .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(9px, -9px);
+    transform: rotate(-45deg) translate(8.75px, -8.75px);
   }
 }
 /* Dropdown menu styles */
