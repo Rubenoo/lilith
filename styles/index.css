@@ -78,7 +78,7 @@ h4 {
   margin-block: 0;
 
   @media screen and (max-width: 992px) {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
   }
 
   &.oranje {
@@ -107,8 +107,8 @@ p {
   font-weight: 400;
   font-style: normal;
   color: var(--bruin);
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.5;
   &.oranje {
     color: var(--oranje);
   }
