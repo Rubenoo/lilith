@@ -20,6 +20,7 @@ export default defineConfig({
       },
     },
   },
+  publicDir: "public",
   plugins: [
     ViteImageOptimizer({
       png: {

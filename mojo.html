@@ -2,8 +2,12 @@
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
 
     <!-- Enhanced SEO metadata -->
     <meta
@@ -30,7 +34,7 @@
     />
     <meta
       property="og:image"
-      content="assets/svg/Logo_Lilith_mojo_bruin_72.svg"
+      content="/assets/svg/Logo_Lilith_mojo_bruin_72.svg"
     />
     <meta property="og:site_name" content="Lilith Mojo" />
 
@@ -46,39 +50,16 @@
     />
     <meta
       name="twitter:image"
-      content="assets/svg/Logo_Lilith_mojo_bruin_72.svg"
+      content="/assets/svg/Logo_Lilith_mojo_bruin_72.svg"
     />
 
-    <!-- Local Business Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "HealthAndBeautyBusiness",
-        "name": "Lilith Mojo",
-        "description": "Holistische massage en lichaamswerk",
-        "serviceType": "Massage Therapy",
-        "areaServed": ["Zeist", "Utrecht"],
-        "provider": {
-          "@type": "Person",
-          "name": "Lilith Vermeulen"
-        },
-        "telephone": "+31614943731",
-        "email": "info@lilithmojo.nl",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Nijenheim 6001",
-          "addressLocality": "Zeist",
-          "postalCode": "3704 BH",
-          "addressCountry": "NL"
-        }
-      }
-    </script>
-
-    <link rel="stylesheet" href="styles/index.css" />
+    <!-- Rest of your existing content with consistent paths -->
+    <link rel="stylesheet" href="/styles/index.css" />
     <title>
       Lilith Mojo - Holistische Massage en Lichaamswerk Zeist Utrecht
     </title>
   </head>
+  <!-- Rest of your HTML content -->
   <body>
     <nav class="navbar">
       <button class="hamburger" aria-label="Toggle menu">
@@ -105,7 +86,7 @@
         <div class="mojo-intro-content">
           <a href="/">
             <img
-              src="assets/svg/Logo_Lilith_mojo_bruin_72.svg"
+              src="/assets/svg/Logo_Lilith_mojo_bruin_72.svg"
               alt="Lilith Mojo"
               loading="eager"
               class="small-logo"
@@ -128,7 +109,7 @@
             Plan een afspraak
           </a>
         </div>
-        <img src="assets/svg/zandloper.svg" alt="Lilith Mojo" />
+        <img src="/assets/svg/zandloper.svg" alt="Lilith Mojo" />
       </section>
       <section class="home-toelichting-container">
         <div>
@@ -144,7 +125,7 @@
             vermogen van het lichaam.
           </p>
         </div>
-        <img src="assets/png/lilith_mojo_02.png" />
+        <img src="/assets/png/lilith_mojo_02.png" />
       </section>
       <section class="home-toelichting-container">
         <div class="massage-container">
@@ -165,7 +146,7 @@
         <div class="spark-container">
           <img
             class="small"
-            src="assets/png/symbolen/bruin/Symbols_lilith-21_300.png"
+            src="/assets/png/symbolen/bruin/Symbols_lilith-21_300.png"
           />
           <h3 class="bruin">Give yourself some sparkle!</h3>
         </div>
@@ -185,10 +166,10 @@
             geopend op vrij-, zat- en zondag.
           </p>
         </div>
-        <img src="assets/png/behandelkamer.png" />
+        <img src="/assets/png/behandelkamer.png" />
       </section>
       <section class="home-toelichting-container reverse">
-        <img src="assets/png/Mojo actie IMG_5429.png" />
+        <img src="/assets/png/Mojo actie IMG_5429.png" />
 
         <div>
           <h2 class="oranje">Bedrijfsmassage</h2>
@@ -208,7 +189,7 @@
       <section class="quote-container padding-quote">
         <img
           class="small-groen"
-          src="assets/png/symbolen/groen/Symbols_lilith-06_300.png"
+          src="/assets/png/symbolen/groen/Symbols_lilith-06_300.png"
         />
         <h4>
           "Ik heb longcovid, mijn lichaamsfuncties zijn volledig ontregeld. De
@@ -222,7 +203,7 @@
     <footer>
       <img
         alt="Lilith Logo"
-        src="assets/png/logos/roze/Logo_Lilith_roze_72.png"
+        src="/assets/png/logos/roze/Logo_Lilith_roze_72.png"
         class="logo"
       />
       <div class="icon-container">
@@ -238,14 +219,14 @@
             href="https://www.instagram.com/lilith_mojo/"
             target="_blank"
           >
-            <img class="icon" alt="Instagram" src="assets/svg/instagram.svg" />
+            <img class="icon" alt="Instagram" src="/assets/svg/instagram.svg" />
           </a>
           <a
             href="https://www.linkedin.com/in/lilith-vermeulen-92b16b24"
             target="_blank"
             class="icon"
           >
-            <img class="icon" alt="LinkedIn" src="assets/svg/linkedin.svg" />
+            <img class="icon" alt="LinkedIn" src="/assets/svg/linkedin.svg" />
           </a>
         </div>
       </div>
@@ -268,10 +249,10 @@
 
       <div class="icon-container">
         <p>
-          <a href="documenten/Algemenevoorwaarden.pdf" target="_blank"
+          <a href="/documenten/Algemenevoorwaarden.pdf" target="_blank"
             >Algemene voorwaarden</a
           >
-          <a href="documenten/Privacyverklaring.pdf" target="_blank"
+          <a href="/documenten/Privacyverklaring.pdf" target="_blank"
             >Privacyverklaring
           </a>
           <a href="https://www.lvnt.nl/" target="_blank"
@@ -286,6 +267,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="/assets/js/script.js" type="module"></script>
   </body>
 </html>
