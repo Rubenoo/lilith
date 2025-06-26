@@ -3,7 +3,7 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { resolve } from "path";
 
 export default defineConfig({
-  base: "",
+  base: "/",
   server: {
     open: true,
     hot: true,
@@ -15,13 +15,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        home: resolve(__dirname, "home.html"),
         management: resolve(__dirname, "management.html"),
         mojo: resolve(__dirname, "mojo.html"),
-      },
-      output: {
-        manualChunks: undefined,
-        compact: true,
       },
     },
   },

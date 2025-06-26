@@ -22,10 +22,13 @@ body {
   margin: 0;
   background-color: var(--licht-roze);
   opacity: 0;
-  transition: opacity 0.5s ease;
+  animation: fadeIn 1.2s ease-in-out forwards;
 }
-body.loaded {
-  opacity: 1;
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 /* Stijlen voor de main content */
